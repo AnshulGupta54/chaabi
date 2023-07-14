@@ -1,0 +1,18 @@
+.dashboard{
+    display: flex;
+}
+
+.sidebar{
+    width: 356px;
+    height: 1117px;
+    box-shadow: 0px 4px 4px 0px #0D62FF;
+
+}
+
+.sidebar img{
+    width: 204px;
+    height: 56.96104049682617px;
+    top: 40px;
+    left: 76px;
+
+}
