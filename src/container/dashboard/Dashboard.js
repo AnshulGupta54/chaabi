@@ -5,8 +5,8 @@ import Header from "./components/Header/Header";
 const Dashboard=()=>{
     return (
         <div>
-        <Header />
-        <Body />
+            <Header />
+            <Body />
         </div>
         
     );

@@ -1,31 +1,36 @@
-import { useState } from 'react';
-import Dashboard from '../dashboard/Dashboard';
-import logo from './../../assets/svg/Logo.svg';
-import classes from './Sidebar.module.css';
+import { useState } from "react";
+import Dashboard from "../dashboard/Dashboard";
+import logo from "./../../assets/svg/Logo.svg";
+import classes from "./Sidebar.module.css";
 
-const Sidebar=()=>{
-    const [viewDashboard,setViewDashboard]= useState(false);
+const sidebar_menu = ['Dashboard','Trainings','Users','Analytics','My account','Support']
+const Sidebar = () => {
+  const [viewDashboard, setViewDashboard] = useState(-1);
 
-    const dashboardHandler=()=>{
-        setViewDashboard(true);
-    }
+  const dashboardHandler = (num) => {
+    setViewDashboard(num);
+  };
 
-    return (
-        <div className={classes.dashboard}>
-            <div className={classes.sidebar}>
+  return (
+    <div className={classes.dashboard}>
+      <div className={classes.sidebar}>
+        <div className={classes.logo}>
             <img src={logo} />
-            <p onClick={dashboardHandler} >Dashboard</p>
-            {/* {viewDashboard && <Dashboard />} */}
-            <p>Trainings</p>
-            <p>Users</p>
-            <p>Analytics</p>
-            <p>My account</p>
-            <p>Support</p>
-
-            </div>
-            {viewDashboard && <Dashboard/>}
         </div>
-    );
-}
+        <div className={classes.sidebar_menu}>
+            {sidebar_menu.map((item,index)=>
+                <div onClick={()=>dashboardHandler(index)} style={{backgroundColor:`${index===viewDashboard?'#0D62FF':''}`}} key={index} className={classes.item}>
+                    <span style={{color:`${index===viewDashboard?'#FFFFFF':'#000000'}`}} className={classes.text}>{item}</span>
+                </div>
+            )}
+        </div>
+        
+      </div>
+      <div className={classes.content}>
+        {viewDashboard===0 && <Dashboard />}
+      </div>
+    </div>
+  );
+};
 
 export default Sidebar;

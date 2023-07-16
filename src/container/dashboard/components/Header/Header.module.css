@@ -1,9 +1,18 @@
 .header{
-    width: 1372px;
     height: 145px;
     left: 356px;
     border-radius: 0px 0px 10px 10px;
     background: #0C58E6;
-    text-align: left
-    ;
+    text-align: left;
+    padding : 2em;
+}
+
+.header h1{
+    color : #fdfdfdf0;
+}
+
+.header p{
+    color : #fdfdfdf0;
+    font-weight: 500;
+    font-size: 15px;
 }

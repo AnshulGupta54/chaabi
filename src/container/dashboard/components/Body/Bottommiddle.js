@@ -1,9 +1,11 @@
 import DonutChart from "react-donut-chart";
 import classes from "./Bottommiddle.module.css";
+import CardWrapperComp from "../../../common/CardWrapper";
 
 const Bottommiddle = () => {
   return (
-    <div className={classes.bottommiddle}>
+    <CardWrapperComp ht="340px" wt="30%">
+    {/* <div className={classes.bottommiddle}> */}
       <p>Quiz Passing %</p>
       <DonutChart
         data={[
@@ -22,7 +24,8 @@ const Bottommiddle = () => {
         height={400}
         width={400}
       />
-    </div>
+    {/* </div> */}
+    </CardWrapperComp>
   );
 };
 

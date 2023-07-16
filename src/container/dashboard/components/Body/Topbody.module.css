@@ -1,12 +1,11 @@
 .topbody{
     display: flex;
-    width: 1336px;
-    height: 172px;
+    height: 150px;
     top: 169px;
     left: 380px;
     border-radius: 10px;
     border: 1px;
-    border: 1px solid #3333331A;
     justify-content: space-between;
+    margin-bottom: 1rem;
     
 }

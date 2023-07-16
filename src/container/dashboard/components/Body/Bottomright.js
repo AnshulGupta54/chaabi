@@ -1,11 +1,13 @@
 import { Progress } from 'rsuite';
 import classes from './Bottomright.module.css';
 import "rsuite/dist/rsuite.min.css";
+import CardWrapperComp from '../../../common/CardWrapper';
 
 
 const Bottomright=()=>{
     return (
-        <div className={classes.bottomright}>
+        <CardWrapperComp ht="340px" wt="44%">
+        {/* <div className={classes.bottomright}> */}
         <div className={classes.heading}>
             <p>Daily Training Completions</p>
             <p>Last 7 Days</p>
@@ -48,7 +50,8 @@ const Bottomright=()=>{
 
 
             </div>
-        </div>
+        {/* </div> */}
+        </CardWrapperComp>
     );
  }
 

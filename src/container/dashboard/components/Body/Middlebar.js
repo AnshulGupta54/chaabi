@@ -1,11 +1,13 @@
 import { Progress } from 'rsuite';
 import classes from './Middlebar.module.css';
 import "rsuite/dist/rsuite.min.css";
+import CardWrapperComp from '../../../common/CardWrapper';
 
 
 const Middlebar=()=>{
     return (
-        <div className={classes.middlebar}>
+        <CardWrapperComp ht="420px" wt="68%">
+        {/* <div className={classes.middlebar}> */}
             <div className={classes.heading}>
             <p>Last 14 days Active Workers In Training</p>
             <p>Last 14 days</p>
@@ -52,7 +54,8 @@ const Middlebar=()=>{
 
             </div>
 
-        </div>
+        {/* </div> */}
+        </CardWrapperComp>
     );
 }
 

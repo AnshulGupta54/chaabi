@@ -1,11 +1,24 @@
 .dashboard{
     display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+
+.logo{
+    height: 110px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #cccccc;
 }
 
 .sidebar{
-    width: 356px;
+    width: 18% !important;
     height: 1117px;
-    box-shadow: 0px 4px 4px 0px #0D62FF;
+    box-shadow: 0px 4px 0px 0px #0D62FF;
+    position: fixed;
 
 }
 
@@ -15,4 +28,36 @@
     top: 40px;
     left: 76px;
 
+}
+
+.content{
+    width: 82%;
+    position: relative;
+    left:18%;
+  background-color: #e8f1f7;
+
+}
+
+.sidebar_menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:2rem;
+}
+
+.item{
+    width:70%;
+    height:2rem;
+    border-radius:4px;
+    margin-bottom: 5px;
+    text-align:left;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+.text {
+    color:black;
+    font-weight: 600;
 }
