@@ -3,6 +3,7 @@ import classes from './Middlebar.module.css';
 import "rsuite/dist/rsuite.min.css";
 import CardWrapperComp from '../../../common/CardWrapper';
 
+const data=[30,35,35,45,50,40,45,30,50,70,80,100];
 
 const Middlebar=()=>{
     return (
@@ -24,18 +25,9 @@ const Middlebar=()=>{
                 </ul>
             </div>
             <div className={classes.bar}>
-                <Progress.Line percent={30} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={35} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={35} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={45} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={50} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={40} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={45} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={30} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={50} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={70} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={80} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
-                <Progress.Line percent={100} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16}/>
+            {data.map((per)=>(
+                     <Progress.Line percent={per} vertical={true} strokeColor="blue" showInfo={false} strokeWidth={16} />
+                ))}
             </div>
             </div>
             <div className={classes.date}>
