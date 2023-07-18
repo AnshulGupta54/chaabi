@@ -5,7 +5,7 @@ import classes from "./Sidebar.module.css";
 
 const sidebar_menu = ['Dashboard','Trainings','Users','Analytics','My account','Support']
 const Sidebar = () => {
-  const [viewDashboard, setViewDashboard] = useState(-1);
+  const [viewDashboard, setViewDashboard] = useState(0);
 
   const dashboardHandler = (num) => {
     setViewDashboard(num);
